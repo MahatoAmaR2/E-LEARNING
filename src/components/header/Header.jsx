@@ -4,7 +4,7 @@ import { IoSearchSharp } from "react-icons/io5";
 function Header() {
   return (
     <>
-      <nav className="  px-6 lg:px-6 py-2.5 h-[70px] bg-[#301E67] flex justify-between items-center">
+      <nav className="  px-8 lg:px-6 py-2.5 h-[70px] bg-[#301E67] flex justify-between items-center">
         <div>
           <h2>CubicleS</h2>
         </div>
@@ -14,11 +14,11 @@ function Header() {
               to="/"
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-[#5B8FB9]" : "text-[#b6EADA]"
+                  isActive ? "text-[#5B8FB9]" : "text-green-200"
                 }  hover:text-sky-700 lg:p-0`
               }
             >
-              Home
+              Docs
             </NavLink>
           </li>
           <li>
@@ -26,7 +26,7 @@ function Header() {
               to="/contact"
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-[#5B8FB9]" : "text-[#b6EADA]"
+                  isActive ? "text-[#5B8FB9]" : "text-green-200"
                 } hover:text-sky-700 lg:p-0
               `
               }
@@ -39,7 +39,7 @@ function Header() {
               to="/courses"
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-[#5B8FB9]" : "text-[#b6EADA]"
+                  isActive ? "text-[#5B8FB9]" : "text-green-200"
                 } hover:text-sky-700 lg:p-0
               `
               }
@@ -52,7 +52,7 @@ function Header() {
               to="teachers"
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-[#5B8FB9]" : "text-[#b6EADA]"
+                  isActive ? "text-[#5B8FB9]" : "text-green-200"
                  } hover:text-sky-700 lg:p-0
               `
               }
@@ -65,7 +65,7 @@ function Header() {
               to="about"
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-[#5B8FB9]" : "text-[#b6EADA]"
+                  isActive ? "text-[#5B8FB9]" : "text-green-200"
                 } hover:text-sky-700 lg:p-0
               `
               }
@@ -73,16 +73,16 @@ function Header() {
               About
             </NavLink>
           </li>
-          <li className="flex items-center w-[250px] h-[45px] rounded-md px-1 bg-[#5B8FB9] cursor-pointer">
-            <span><IoSearchSharp/></span>
+          <li className="flex items-center  w-[250px] h-[45px] rounded-md px-1 bg-green-200 cursor-pointer">
+              <span className="text-[#301E67] px-1 text-[20px]"><IoSearchSharp/></span>
               <input type="text" placeholder="Search Course " 
-              className="bg-transparent outline-none border-none  px-2 overflow-auto"
+              className="bg-transparent outline-none border-none  text-[#301E67] font-normal px-2 overflow-auto text-[16px]"
               />
           </li>
         </ul>
         <div>
           <button
-          className="border border-sky-500 text-sky-500 text-[18px] rounded-md px-3 py-[10px] cursor-pointer font-normal hover:border-sky-700 hover:text-sky-500 "
+          className="border border-green-200 text-green-200 text-[18px] rounded-md px-3 py-[10px] cursor-pointer font-normal hover:border-green-300 hover:text-green-300 "
           >Login / Register</button>
         </div>
       </nav>
