@@ -1,0 +1,18 @@
+label{
+    margin-bottom:  12px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+input {
+    background: transparent;
+    border: 1px solid ;
+    border-color: #301E67;
+    border-radius: 3px;
+    height: 40px;
+}
+input:focus{
+    background:  #20153f;
+    border: 1px solid ;
+    outline: none;
+}

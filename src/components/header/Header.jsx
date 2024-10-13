@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink , Link} from "react-router-dom";
 import { IoSearchSharp } from "react-icons/io5";
 
 function Header() {
@@ -53,7 +53,7 @@ function Header() {
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
                   isActive ? "text-[#5B8FB9]" : "text-green-200"
-                 } hover:text-sky-700 lg:p-0
+                } hover:text-sky-700 lg:p-0
               `
               }
             >
@@ -74,16 +74,22 @@ function Header() {
             </NavLink>
           </li>
           <li className="flex items-center  w-[250px] h-[45px] rounded-md px-1 bg-green-200 cursor-pointer">
-              <span className="text-[#301E67] px-1 text-[20px]"><IoSearchSharp/></span>
-              <input type="text" placeholder="Search Course " 
+            <span className="text-[#301E67] px-1 text-[20px]">
+              <IoSearchSharp />
+            </span>
+            <input
+              type="text"
+              placeholder="Search Course "
               className="bg-transparent outline-none border-none  text-[#301E67] font-normal px-2 overflow-auto text-[16px]"
-              />
+            />
           </li>
         </ul>
         <div>
-          <button
-          className="border border-green-200 text-green-200 text-[18px] rounded-md px-3 py-[10px] cursor-pointer font-normal hover:border-green-300 hover:text-green-300 "
-          >Login / Register</button>
+          <button className="border border-green-200 text-green-200 text-[18px] rounded-md px-3 py-[10px] cursor-pointer font-normal hover:border-green-300 hover:text-green-300 ">
+            <Link to='/signup'>
+            Login / Register
+            </Link>
+          </button>
         </div>
       </nav>
     </>
