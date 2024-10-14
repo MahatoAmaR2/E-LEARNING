@@ -1,6 +1,7 @@
 import "./App.css";
 import {
   Route,
+  Routes,
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
@@ -14,25 +15,32 @@ import { Contact } from "./pages/Contact";
 import { Teacher } from "./pages/Teachers";
 import { Signup } from "./pages/Signup";
 import { Signin } from "./pages/Signin";
+import Notfound from "./pages/Notfound";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    // <Route path="/" element={<Layout />}>
-    //   <Route path="" element={<Home />} />
-    //   <Route path="about" element={<About />} />
-    //   <Route path="courses" element={<Course />} />
-    //   <Route path="contact" element={<Contact />} />
-    //   <Route path="teachers" element={<Teacher />} />
-    // </Route>
-    
-    <Route path="/signup" element={<Signup/>}/>
-    // <Route path="/signin" element={<Signin/>}/>
+    <>
+      <Route path="/" element={<Layout />}>
+        <Route path="" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="courses" element={<Course />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="teachers" element={<Teacher />} />
+      </Route>
+
+      {/* user route  */}
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/signin" element={<Signin />} />
+      {/* error rpute */}
+      <Route path="*" element={<Notfound/>}/>
+
+    </>
   )
 );
 function App() {
   return (
     <>
-        <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </>
   );
 }

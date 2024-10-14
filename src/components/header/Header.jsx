@@ -14,7 +14,7 @@ function Header() {
               to="/"
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-[#5B8FB9]" : "text-green-200"
+                  isActive ? "text-[#6cbcfd]" : "text-green-200"
                 }  hover:text-sky-700 lg:p-0`
               }
             >
@@ -26,7 +26,7 @@ function Header() {
               to="/contact"
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-[#5B8FB9]" : "text-green-200"
+                  isActive ? "text-[#6cbcfd]" : "text-green-200"
                 } hover:text-sky-700 lg:p-0
               `
               }
@@ -39,7 +39,7 @@ function Header() {
               to="/courses"
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-[#5B8FB9]" : "text-green-200"
+                  isActive ? "text-[#6cbcfd]" : "text-green-200"
                 } hover:text-sky-700 lg:p-0
               `
               }
@@ -52,7 +52,7 @@ function Header() {
               to="teachers"
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-[#5B8FB9]" : "text-green-200"
+                  isActive ? "text-[#6cbcfd]" : "text-green-200"
                 } hover:text-sky-700 lg:p-0
               `
               }
@@ -65,7 +65,7 @@ function Header() {
               to="about"
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-[#5B8FB9]" : "text-green-200"
+                  isActive ? "text-[#6cbcfd]" : "text-green-200"
                 } hover:text-sky-700 lg:p-0
               `
               }
@@ -73,14 +73,14 @@ function Header() {
               About
             </NavLink>
           </li>
-          <li className="flex items-center  w-[250px] h-[45px] rounded-md px-1 bg-green-200 cursor-pointer">
+          <li className="flex items-center  w-[250px] h-[45px] rounded-md px-1 bg-green-200 cursor-pointer ">
             <span className="text-[#301E67] px-1 text-[20px]">
               <IoSearchSharp />
             </span>
             <input
               type="text"
               placeholder="Search Course "
-              className="bg-transparent outline-none border-none  text-[#301E67] font-normal px-2 overflow-auto text-[16px]"
+              className=" outline-none border-none  text-[#301E67] font-semibold px-2 overflow-auto text-[16px] focus:bg-green-200 focus:border-none  "
             />
           </li>
         </ul>
