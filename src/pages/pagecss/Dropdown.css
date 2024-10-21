@@ -1,0 +1,33 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-button {
+    font-size: 42px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: -70px;
+    border-radius: 4px;
+    z-index: 1;
+    margin-top: 5px;
+    width: 160px; 
+  }
+  
+  .dropdown-item {
+    font-weight: 400;
+    font-size: 14px;
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Highlight on hover */
+  }
+  

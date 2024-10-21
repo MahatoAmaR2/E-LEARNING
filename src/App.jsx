@@ -15,6 +15,7 @@ import { Teacher } from "./pages/Teachers";
 import { Signup } from "./pages/Signup";
 import { Signin } from "./pages/Signin";
 import Notfound from "./pages/Notfound";
+import { UserDropdown } from "./pages/UserDropdown";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,9 +31,9 @@ const router = createBrowserRouter(
       {/* user route  */}
       <Route path="/signup" element={<Signup />} />
       <Route path="/signin" element={<Signin />} />
+      <Route path="/UserDropdown" element={<UserDropdown />} />
       {/* error rpute */}
-      <Route path="*" element={<Notfound/>}/>
-
+      <Route path="*" element={<Notfound />} />
     </>
   )
 );
