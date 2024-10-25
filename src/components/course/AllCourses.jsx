@@ -1,10 +1,11 @@
 import './courses.css'
 import { CourseCard } from './CourseCard';
+import { MasterClass } from '../../pages/MasterClass';
 import thumbnail from "../../assets/images/thumbnail.jpg";
 function AllCourses() {
   return (
     <>
-      <section className="flex flex-col px-[70px] bg-[#060131]">
+      <section className="flex flex-col px-[70px] bg-[#060131] ">
         <div className="mt-6">
           <p className="text-3xl font-semibold">
             All the skills you need in one place
@@ -24,7 +25,7 @@ function AllCourses() {
             <li>Data Science</li>
           </ul>
         </div>
-        <div className="cards flex overflow-x-auto scrollbar-hidden gap-6">
+        <div className="cards mb-4 flex overflow-x-auto scrollbar-hidden gap-6">
           <CourseCard
           thumbnail={thumbnail}
           title=" The Web Development Bootcam 2024"
@@ -52,6 +53,7 @@ function AllCourses() {
           />
         </div>
       </section>
+      <MasterClass/>
     </>
   );
 }

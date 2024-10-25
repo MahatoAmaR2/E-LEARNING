@@ -8,7 +8,7 @@ import {
 import Layout from "./Layout";
 
 import { Home } from "./pages/Home";
-import { About } from "./pages/About";
+import { MasterClass } from "./pages/MasterClass";
 import { Course } from "./pages/Courses";
 import { Contact } from "./pages/Contact";
 import { Teacher } from "./pages/Teachers";
@@ -22,7 +22,7 @@ const router = createBrowserRouter(
     <>
       <Route path="/" element={<Layout />}>
         <Route path="" element={<Home />} />
-        <Route path="about" element={<About />} />
+        <Route path="masterclass" element={<MasterClass />} />
         <Route path="courses" element={<Course />} />
         <Route path="contact" element={<Contact />} />
         <Route path="teachers" element={<Teacher />} />

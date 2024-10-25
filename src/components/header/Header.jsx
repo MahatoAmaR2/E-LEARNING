@@ -65,7 +65,7 @@ function Header() {
           </li>
           <li>
             <NavLink
-              to="about"
+              to="masterclass"
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
                   isActive ? "text-[#6cbcfd]" : "text-green-200"
@@ -73,7 +73,7 @@ function Header() {
               `
               }
             >
-              About
+              Masterclass
             </NavLink>
           </li>
           <li className="flex items-center  w-[250px] h-[45px] rounded-md px-1 bg-green-200 cursor-pointer ">
