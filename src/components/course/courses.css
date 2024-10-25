@@ -1,0 +1,22 @@
+li {
+    position: relative;
+    cursor: pointer;
+}
+
+li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -16px; /* Position it below the text */
+    height: 2px; /* Height of the border */
+    background-color: transparent; 
+    transition: background-color 0.2s ease; 
+}
+
+li:hover::after {
+    background-color: currentColor; /* Change to text color on hover */
+}
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}

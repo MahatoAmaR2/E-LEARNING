@@ -1,12 +1,15 @@
 .dropdown {
     position: relative;
     display: inline-block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-items: center;
   }
   
   .dropdown-button {
     font-size: 42px;
     cursor: pointer;
-    transition: background-color 0.3s;
   }
   
   .dropdown-menu {
@@ -21,7 +24,7 @@
   
   .dropdown-item {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     padding: 8px;
     cursor: pointer;
     color: white;

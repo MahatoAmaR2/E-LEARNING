@@ -1,15 +1,17 @@
 import { NavLink, Link } from "react-router-dom";
 import { IoSearchSharp } from "react-icons/io5";
 import { UserDropdown } from "../../pages/UserDropdown.jsx";
+import { useState } from "react";
 
 function Header() {
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   return (
     <>
       <nav className=" px-[70px] py-2.5 h-[70px] bg-[#301E67] flex justify-between items-center">
         <div>
           <h2>CubicleS</h2>
         </div>
-        <ul className="flex gap-5 items-center">
+        <ul className="flex gap-5 items-center ">
           <li>
             <NavLink
               to="/"
@@ -81,16 +83,19 @@ function Header() {
             <input
               type="text"
               placeholder="Search Course "
-               aria-label="Search Courses"
+              aria-label="Search Courses"
               className=" outline-none border-none  text-[#301E67] font-semibold px-2 overflow-auto text-[16px] focus:bg-green-200 focus:border-none  "
             />
           </li>
         </ul>
-        <div className="mt-2">
-          {/* <button className="border border-green-200 text-green-200 text-[18px] rounded-md px-3 py-[10px] cursor-pointer font-normal hover:border-green-300 hover:text-green-300 ">
-            <Link to="/signup">Login / Register</Link>
-          </button> */}
-          <UserDropdown />
+        <div>
+          {isLoggedIn ? (
+            <UserDropdown />
+          ) : (
+            <button className="border border-green-200 text-green-200 text-[18px] rounded-md px-3 py-[10px] cursor-pointer font-normal hover:border-green-300 hover:text-green-300 ">
+              <Link to="/signup">Login / Register</Link>
+            </button>
+          )}
         </div>
       </nav>
     </>
