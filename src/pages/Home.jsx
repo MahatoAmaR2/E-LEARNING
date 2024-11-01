@@ -1,6 +1,9 @@
 import { Typewriter } from "react-simple-typewriter";
 import landing from "../assets/images/landing.jpg" 
 import { AllCourses } from "../components/course/AllCourses";
+import { MasterClass } from "./MasterClass";
+import { About } from "./About";
+import { Faq } from "../components/FAQ/Faq";
 function Home() {
   return (
     <>
@@ -44,6 +47,9 @@ function Home() {
         </div>
       </main>
         <AllCourses/>
+        <MasterClass/>
+        <About/>
+        <Faq/>
     </>
   );
 }

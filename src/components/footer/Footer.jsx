@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <>
-      <footer className="bg-violet-950 px-10 flex gap-x-8 ">
+      <footer className="bg-[#060131] px-10 py-10 flex gap-x-8 ">
         <div className="w-[40%]">
           <div className="text-gray-400 ">
             <h2>CubicleS</h2>

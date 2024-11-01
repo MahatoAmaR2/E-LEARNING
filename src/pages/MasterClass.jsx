@@ -1,5 +1,4 @@
 import landingSvg from '../assets/images/masterclass_landing.svg'
-import { About } from './About';
 
 function MasterClass() {
   return (

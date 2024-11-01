@@ -1,6 +1,7 @@
-import './courses.css'
-import { CourseCard } from './CourseCard';
-import { MasterClass } from '../../pages/MasterClass';
+import "./courses.css";
+import { CourseCard } from "./CourseCard";
+import { MasterClass } from "../../pages/MasterClass";
+import { About } from "../../pages/About";
 import thumbnail from "../../assets/images/thumbnail.jpg";
 function AllCourses() {
   return (
@@ -27,33 +28,32 @@ function AllCourses() {
         </div>
         <div className="cards mb-4 flex overflow-x-auto scrollbar-hidden gap-6">
           <CourseCard
-          thumbnail={thumbnail}
-          title=" The Web Development Bootcam 2024"
-          instructor="Amar Mahato, Rudra"
+            thumbnail={thumbnail}
+            title=" The Web Development Bootcam 2024"
+            instructor="Amar Mahato, Rudra"
           />
-           <CourseCard
-          thumbnail={thumbnail}
-          title=" The Web Development Bootcam 2024"
-          instructor="Amar Mahato, Rudra"
+          <CourseCard
+            thumbnail={thumbnail}
+            title=" The Web Development Bootcam 2024"
+            instructor="Amar Mahato, Rudra"
           />
-           <CourseCard
-          thumbnail={thumbnail}
-          title=" The Web Development Bootcam 2024"
-          instructor="Amar Mahato, Rudra"
+          <CourseCard
+            thumbnail={thumbnail}
+            title=" The Web Development Bootcam 2024"
+            instructor="Amar Mahato, Rudra"
           />
-           <CourseCard
-          thumbnail={thumbnail}
-          title=" The Web Development Bootcam 2024"
-          instructor="Amar Mahato, Rudra"
+          <CourseCard
+            thumbnail={thumbnail}
+            title=" The Web Development Bootcam 2024"
+            instructor="Amar Mahato, Rudra"
           />
-           <CourseCard
-          thumbnail={thumbnail}
-          title=" The Web Development Bootcam 2024"
-          instructor="Amar Mahato, Rudra"
+          <CourseCard
+            thumbnail={thumbnail}
+            title=" The Web Development Bootcam 2024"
+            instructor="Amar Mahato, Rudra"
           />
         </div>
       </section>
-      <MasterClass/>
     </>
   );
 }

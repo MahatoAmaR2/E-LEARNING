@@ -7,7 +7,7 @@ function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   return (
     <>
-      <nav className=" px-[70px] py-2.5 h-[70px] bg-[#301E67] flex justify-between items-center">
+      <nav className=" px-[70px] py-2.5 h-[70px] bg-[#060131] flex justify-between items-center">
         <div>
           <h2>CubicleS</h2>
         </div>
