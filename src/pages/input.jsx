@@ -2,7 +2,7 @@ import "./pagecss/Input.css"
 import { forwardRef } from "react";
 
 const Input = forwardRef(function Input(
-  { label, type = "text", className = "", ...props },
+  { label, error, type = "text", className = "", ...props },
   ref
 ) {
   return (
@@ -15,6 +15,7 @@ const Input = forwardRef(function Input(
         ref={ref}
         {...props}
       />
+      {error && <span className="text-red-500 text-sm">{error.message}</span>}
     </label>
   );
 });

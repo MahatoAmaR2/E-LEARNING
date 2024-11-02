@@ -4,7 +4,7 @@ import { UserDropdown } from "../../pages/UserDropdown.jsx";
 import { useState } from "react";
 
 function Header() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <>
       <nav className=" px-[70px] py-2.5 h-[70px] bg-[#060131] flex justify-between items-center">

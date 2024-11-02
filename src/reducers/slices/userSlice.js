@@ -7,15 +7,12 @@ export const signup = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       const response = await axiosInstance.post("users/register", userData);
-      if (!response.ok) {
-        throw new Error("Registration failed");
-      }
       console.log(response.data);
-
       return response.data;
     } catch (error) {
-      console.log("signup error :", rejectWithValue(error.message));
-      return rejectWithValue(error.message);
+      return rejectWithValue(
+        error.response?.data?.message || "Registration failed"
+      );
     }
   }
 );
@@ -27,13 +24,10 @@ export const login = createAsyncThunk(
       const response = await axiosInstance.post("users/login", credentials, {
         withCredentials: true,
       });
-      if (!response.ok) {
-        throw new Error("Login failed");
-      }
+
       return response.data;
     } catch (error) {
-      console.log("logout error :", rejectWithValue(error.message));
-      return rejectWithValue(error.message);
+      return rejectWithValue(error.response?.data?.message || "Login failed");
     }
   }
 );
@@ -42,16 +36,18 @@ export const logout = createAsyncThunk(
   "auth/logout",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axiosInstance.post("users/logout", {
-        withCredentials: true,
-      });
-      if (!response.ok) {
-        throw new Error("Logout failed");
-      }
-      return response;
+      const response = await axiosInstance.post(
+        "users/logout",
+        {},
+        {
+          withCredentials: true,
+        }
+      );
+
+      return;
     } catch (error) {
       console.log("logout failed");
-      return rejectWithValue(error.message);
+      return rejectWithValue(error.response?.data?.message || "Logout failed");
     }
   }
 );
@@ -90,6 +86,7 @@ const authSlice = createSlice({
         // localStorage.setItem("role", action.payload.data.user.role);
         state.loading = false;
         state.user = action.payload;
+        state.isLoggedIn = true
       })
       .addCase(login.rejected, (state, action) => {
         state.loading = false;
@@ -97,7 +94,7 @@ const authSlice = createSlice({
       })
       .addCase(logout.fulfilled, (state) => {
         localStorage.setItem("isLoggedIn", false);
-        localStorage.removeItem("role");
+        // localStorage.removeItem("role");
         state.loading = false;
         state.user = null;
         state.isLoggedIn = false;
